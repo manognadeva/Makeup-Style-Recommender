@@ -1,0 +1,176 @@
+              
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Style Recommender</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8d7d7;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .home-page {
+            padding: 20px;
+            color: #666;
+            font-size: 1.1em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #d4436b;
+            font-size: 3em;
+            margin-bottom: 60px;
+            font-weight: normal;
+        }
+        .upload-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .upload-circle {
+            width: 400px;
+            height: 400px;
+            background-color: #ffe5e5;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .upload-circle:hover {
+            background-color: #ffd5d5;
+        }
+        .upload-text {
+            color: #333;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-section {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        select {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 1em;
+            appearance: none;
+            background: white url("data:image/svg+xml,<svg height='10' width='10' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+            background-position: calc(100% - 20px) center;
+            cursor: pointer;
+        }
+        #file-input {
+            display: none;
+        }
+        #preview-image {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 50%;
+            display: none;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #d4436b;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #c13960;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-page">Home Page</div>
+    <div class="container">
+        <h1>Makeup Style Recommender</h1>
+        <form id="makeupForm" action="/predict" method="post" enctype="multipart/form-data">
+            <div class="upload-section">
+                <div class="upload-circle" onclick="document.getElementById('file-input').click()">
+                    <div class="upload-text" id="upload-text">
+                        Upload an image <span>⇩</span>
+                    </div>
+                    <img id="preview-image" src="#" alt="Preview">
+                </div>
+            </div>
+            <input type="file" id="file-input" name="file" accept="image/*" required>
+            
+            <div class="category-section">
+                <select name="choice1" required>
+                    <option value="" disabled selected>Choose a Category</option>
+                    <option value="eyeshadow">Eyeshadow</option>
+                    <option value="lipstick">Lipstick</option>
+                    <option value="blush">Blush</option>
+            
+                </select>
+                
+                <select name="choice2" required>
+                    <option value="" disabled selected>Choose a Category</option>
+                    <option value="eyeshadow">Eyeshadow</option>
+                    <option value="lipstick">Lipstick</option>
+                    <option value="blush">Blush</option>
+            
+                </select>
+
+                <button type="submit" class="submit-btn">Get Recommendations</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('file-input').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('preview-image');
+                    const uploadText = document.getElementById('upload-text');
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    uploadText.style.display = 'none';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('makeupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
