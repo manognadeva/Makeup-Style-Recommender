@@ -24,7 +24,7 @@ This project is a machine learning-based web application that recommends makeup 
 
 ## Dataset
 
-The project utilizes the **FairFace Dataset** with a focus on Fitzpatrick skin tone classifications. The dataset is preprocessed to map Fitzpatrick skin tones into three categories: Light, Medium, and Dark.
+The project utilizes the [FairFace Dataset](https://www.kaggle.com/code/kaiju8/race-classification-using-pytorch/input?select=fairface) with a focus on Fitzpatrick skin tone classifications. The dataset is preprocessed to map Fitzpatrick skin tones into three categories: Light, Medium, and Dark.
 
 ## Running the App
 
