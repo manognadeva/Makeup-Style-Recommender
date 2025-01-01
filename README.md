@@ -53,10 +53,18 @@ The project utilizes the [FairFace Dataset](https://www.kaggle.com/code/kaiju8/r
 
 
 # Model Details
-The model is built using EfficientNetB0 with transfer learning:
+The model is built using ResNet50V2 with transfer learning:
 
-- Base model: Pretrained on ImageNet.
-- Custom layers: Global average pooling, dense layers, and a softmax output layer for skin tone classification.
+#### Base model: Pretrained on ImageNet
+#### Custom layers:
+- Data augmentation (random brightness, contrast, and horizontal flip)
+- Global average pooling
+- Batch normalization
+- Dropout
+- Dense layers with ReLU activation and L2 regularization
+- Softmax output layer for skin tone classification (Light, Medium, Dark).
+
+The model uses transfer learning by freezing all layers except the last 30 of the ResNet50V2 base. It is compiled with Adam optimizer and categorical crossentropy loss for the skin tone classification task
 
 ## Epoch - Model Training
 
@@ -68,7 +76,7 @@ The model is built using EfficientNetB0 with transfer learning:
 - Expand makeup styles by incorporating additional product categories, such as concealer and bronzer recommendations.
 - Introduce enhanced user features, including user profile creation for saving preferences and past recommendations.
 - Accuracy Enchancement:
-   - Fine-Tuning EfficientNetB0 to extract more relevant features and improve classification accuracy. Fine-tuning requires additional training epochs and more computational resources.
+   - Fine-Tuning ResNet50 to extract more relevant features and improve classification accuracy. Fine-tuning requires additional training epochs and more computational resources.
    - Model Ensemble to combine predictions from multiple models such as EfficientNetB0 and ResNet50, to improve robustness and overall accuracy. Ensemble learning helps reduce bias and         variance, leading to better generalization on unseen data. Implementing ensemble learning significantly increases computational and storage requirements, which requires a little more      of time to execute.
  
 ## Result:
