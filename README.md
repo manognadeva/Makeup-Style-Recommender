@@ -26,45 +26,30 @@ This project is a machine learning-based web application that recommends makeup 
 
 The project utilizes the **FairFace Dataset** with a focus on Fitzpatrick skin tone classifications. The dataset is preprocessed to map Fitzpatrick skin tones into three categories: Light, Medium, and Dark.
 
-## Installation
+## Running the App
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/makeup-recommender.git
-   cd makeup-recommender
-   ```
-2. Install the required Python packages:
-   ```
-   pip install -r requirements.txt
-   ```
-
-## Usage
-### Model Training
-
-1. Update the paths for training and testing datasets in the script:
-``` base_path = "/path/to/dataset/" ```
-2. Run the model training script to train an EfficientNetB0-based model:
-   ```python train_model.py ```
+- Install Jupyter Notebook or open SLAY_Project_Assessment.ipynb in Google colab.
+- Download the dataset or move it your google drive from the above link
+- Run the first two nodes in Google colab and give access to drive when asked to obtain the dataset
+- Create an account in Ngrok and create a authtoken. This token will allow the google colab to access public url outside its designated cloud.
+- Run each node. This will train a model and save it in google colab following which a flask app will be started.
 
 ## Web Application
-1. Start the Flask web server:
-``` python app.py ```
-2. Use the provided ngrok public URL to access the web application:
+
+1. Click on the provided ngrok public URL to access the web application that comes up after running the colab:
    ``` https://<ngrok-public-url> ```
-3. Upload an image, select two makeup categories, and view recommendations.
+2. Upload an image, select two makeup categories, and view recommendations.
 
 # File Structure
-- project/
-- ├── app.py                   # Flask web application script
-- ├── train_model.py           # Model training script
+         
 - ├── templates/               # HTML templates for the web app
 - │   ├── index.html           # Home page
 - │   └── result.html          # Results page
 - ├── static/
 - │   └── uploads/             # Uploaded images
-- ├── requirements.txt         # Required Python packages
+- ├──  SLAY_Project_Assessment.ipynb       
 - ├── README.md                # Project documentation
-- └── dataset/                 # Dataset folder (FairFace)
+
 
 
 # Model Details
