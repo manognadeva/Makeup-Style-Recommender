@@ -18,7 +18,7 @@ This project is a machine learning-based web application that recommends makeup 
 ## Technical Implementation
 
 - Flask-based web application with ngrok for public access
-- EfficientNetB0 model architecture with transfer learning
+- ResNet50V2 model architecture with transfer learning
 - Responsive UI design with modern CSS styling
 - Secure file handling and validation
 
@@ -77,7 +77,7 @@ The model uses transfer learning by freezing all layers except the last 30 of th
 - Introduce enhanced user features, including user profile creation for saving preferences and past recommendations.
 - Accuracy Enchancement:
    - Fine-Tuning ResNet50 to extract more relevant features and improve classification accuracy. Fine-tuning requires additional training epochs and more computational resources.
-   - Model Ensemble to combine predictions from multiple models such as EfficientNetB0 and ResNet50, to improve robustness and overall accuracy. Ensemble learning helps reduce bias and         variance, leading to better generalization on unseen data. Implementing ensemble learning significantly increases computational and storage requirements, which requires a little more      of time to execute.
+   - Model Ensemble to combine predictions from multiple models such as ResNet50V2 and ResNet50, to improve robustness and overall accuracy. Ensemble learning helps reduce bias and         variance, leading to better generalization on unseen data. Implementing ensemble learning significantly increases computational and storage requirements, which requires a little more      of time to execute.
  
 ## Result:
 
