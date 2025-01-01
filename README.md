@@ -55,7 +55,8 @@ The project utilizes the [FairFace Dataset](https://www.kaggle.com/code/kaiju8/r
 # Model Details
 The model is built using ResNet50V2 with transfer learning.
 
-#### Base model: Pretrained on ImageNet
+#### Base model: 
+- Pretrained on ImageNet
 #### Custom layers:
 - Data augmentation (random brightness, contrast, and horizontal flip)
 - Global average pooling
