@@ -8,23 +8,19 @@ This project is a machine learning-based web application that recommends makeup 
 - [Figma Wireframe](https://www.figma.com/proto/DeP7RUbN8MQggXkXko3e3k/Prototype?node-id=0-1&t=H55B3G6goBb035ps-1)
 - [Best Model Keras](https://drive.google.com/file/d/1cm6j33dp_2rHn6FWgbegKA7MfI1SWNzo/view?usp=sharing)
 
-## Table of Contents
+## Core Funtionality
 
-- [Features](#features)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Web Application](#web-application)
-- [Model Training](#model-training)
-- [File Structure](#file-structure)
-- [Future Enhancements](#future-enhancements)
+- Skin tone prediction using a trained deep learning model
+- Personalized makeup recommendations for both party and natural looks
+- Interactive web interface with real-time image preview
+- Support for multiple makeup categories (eyeshadow, blush, lipstick)
 
-## Features
+## Technical Implementation
 
-- Predicts skin tone using a trained EfficientNetB0 model.
-- Recommends makeup shades based on skin tone and user-selected categories.
-- Interactive web interface for image upload and result visualization.
-- Supports three categories: eyeshadow, blush, and lipstick.
+- Flask-based web application with ngrok for public access
+- EfficientNetB0 model architecture with transfer learning
+- Responsive UI design with modern CSS styling
+- Secure file handling and validation
 
 ## Dataset
 
@@ -69,10 +65,6 @@ The project utilizes the **FairFace Dataset** with a focus on Fitzpatrick skin t
 - ├── README.md                # Project documentation
 - └── dataset/                 # Dataset folder (FairFace)
 
-# Web Application
-Home Page: Upload an image and select makeup categories.
-
-Results Page: Displays the uploaded image, predicted skin tone, and personalized makeup recommendations.
 
 # Model Details
 The model is built using EfficientNetB0 with transfer learning:
@@ -93,6 +85,14 @@ The model is built using EfficientNetB0 with transfer learning:
 
 
 ## Result:
+
+### The application provides:
+- Predicted skin tone classification
+### Two sets of recommendations:
+- Party Look: Bold and glamorous options
+- No Makeup Look: Natural and subtle choices
+
+
 ### Step 1:
 
 <img width="1458" alt="Screenshot 2025-01-01 at 4 23 47 PM" src="https://github.com/user-attachments/assets/ceb80ea4-7d0f-4a88-8c2d-995fc6fc91ae" />
