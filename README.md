@@ -4,9 +4,9 @@ This project is a machine learning-based web application that recommends makeup 
 
 ## Links
 
-[Dataset](https://drive.google.com/drive/folders/1uMfF9nHXlKFxTdF-FqFzG8-qllvzA2os?usp=sharing)
-[Figma Wireframe](https://www.figma.com/proto/DeP7RUbN8MQggXkXko3e3k/Prototype?node-id=0-1&t=H55B3G6goBb035ps-1)
-[Best Model Keras]()
+- [Dataset](https://drive.google.com/drive/folders/1uMfF9nHXlKFxTdF-FqFzG8-qllvzA2os?usp=sharing)
+- [Figma Wireframe](https://www.figma.com/proto/DeP7RUbN8MQggXkXko3e3k/Prototype?node-id=0-1&t=H55B3G6goBb035ps-1)
+- [Best Model Keras](https://drive.google.com/file/d/1cm6j33dp_2rHn6FWgbegKA7MfI1SWNzo/view?usp=sharing)
 
 ## Table of Contents
 
