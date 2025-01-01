@@ -73,8 +73,28 @@ The model is built using EfficientNetB0 with transfer learning:
 - Base model: Pretrained on ImageNet.
 - Custom layers: Global average pooling, dense layers, and a softmax output layer for skin tone classification.
 
+## Epoch - Model Training
+
+<img width="1470" alt="Screenshot 2024-12-31 at 8 53 02 PM" src="https://github.com/user-attachments/assets/b389eea1-5a07-4a06-9f36-9cb156f2add0" />
+
 ## Future Enhancements
 
 - Add more makeup categories and shades.
 - Improve the model with additional features (e.g., age, gender).
 - Deploy the application on a cloud platform (e.g., AWS, Heroku).
+
+
+## Result:
+### Step 1:
+
+<img width="1458" alt="Screenshot 2025-01-01 at 4 23 47 PM" src="https://github.com/user-attachments/assets/ceb80ea4-7d0f-4a88-8c2d-995fc6fc91ae" />
+
+### Step 2:
+
+<img width="1466" alt="Screenshot 2025-01-01 at 4 24 00 PM" src="https://github.com/user-attachments/assets/e8a8a26c-f518-4efb-8b84-7f9a35a337e2" />
+
+### Step 3:
+
+<img width="1462" alt="Screenshot 2025-01-01 at 4 24 08 PM" src="https://github.com/user-attachments/assets/e373cc41-7c27-4304-a29e-f346d4f29bb9" />
+
+
