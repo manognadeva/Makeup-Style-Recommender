@@ -53,7 +53,7 @@ The project utilizes the [FairFace Dataset](https://www.kaggle.com/code/kaiju8/r
 
 
 # Model Details
-The model is built using ResNet50V2 with transfer learning:
+The model is built using ResNet50V2 with transfer learning.
 
 #### Base model: Pretrained on ImageNet
 #### Custom layers:
@@ -64,7 +64,7 @@ The model is built using ResNet50V2 with transfer learning:
 - Dense layers with ReLU activation and L2 regularization
 - Softmax output layer for skin tone classification (Light, Medium, Dark).
 
-The model uses transfer learning by freezing all layers except the last 30 of the ResNet50V2 base. It is compiled with Adam optimizer and categorical crossentropy loss for the skin tone classification task
+The model uses transfer learning by freezing all layers except the last 30 of the ResNet50V2 base. It is compiled with Adam optimizer and categorical crossentropy loss for the skin tone classification task.
 
 ## Epoch - Model Training
 
