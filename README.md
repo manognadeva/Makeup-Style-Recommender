@@ -1,4 +1,4 @@
-# Makeup Style Recommender System
+# Makeup Style Recommender
 
 This project is a machine learning-based web application that recommends makeup styles (eyeshadow, blush, and lipstick) tailored to a user's predicted skin tone. It integrates data preprocessing, model training, and a Flask-powered web interface to provide interactive recommendations.
 
