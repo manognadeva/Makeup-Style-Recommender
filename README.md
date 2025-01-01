@@ -79,9 +79,12 @@ The model is built using EfficientNetB0 with transfer learning:
 
 ## Future Enhancements
 
-- Add more makeup categories and shades.
-- Improve the model with additional features (e.g., age, gender).
-- Deploy the application on a cloud platform (e.g., AWS, Heroku).
+While the current implementation effectively demonstrates the core functionality, potential enhancements could include:
+- Implementation of more sophisticated pre-trained models for improved accuracy
+Integration of additional features like facial feature detection
+Expansion of the recommendation system to include more product categories
+Enhanced user interaction features and personalization options
+The system successfully combines machine learning capabilities with a user-friendly interface to provide practical makeup recommendations based on individual characteristics.
 
 
 ## Result:
