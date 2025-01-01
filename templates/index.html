@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #f8d7d7;
+            background-color: #EBB5B5;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         .home-page {
@@ -21,7 +20,7 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 40px;
-            background-color: white;
+            background-color: #FFFFFF;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -31,17 +30,18 @@
             font-size: 3em;
             margin-bottom: 60px;
             font-weight: normal;
+            font-family: 'SF Pro Display', -apple-system, 'Crimson Text', serif;
         }
         .upload-section {
             display: flex;
             justify-content: center;
             margin-bottom: 40px;
         }
-        .upload-circle {
-            width: 300px;
-            height: 300px;
-            background-color: #ffe5e5;
-            border-radius: 10px;  /* Changed from 50% to 10px for square with slightly rounded corners */
+        .upload-area {
+            width: 400px;
+            height: 300px;  
+            background-color: #FFE5E5;
+            border-radius: 10px; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -49,7 +49,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .upload-circle:hover {
+        .upload-area:hover {
             background-color: #ffd5d5;
         }
         .upload-text {
@@ -81,7 +81,8 @@
         #preview-image {
             max-width: 90%;
             max-height: 90%;
-            border-radius: 10px;  /* Changed from 50% to 10px to match container */
+            border-radius: 10px;  
+            object-fit: cover; 
             display: none;
         }
         .submit-btn {
@@ -89,10 +90,10 @@
             width: 100%;
             padding: 15px;
             margin-top: 20px;
-            background-color: #d4436b;
+            background-color: #D75D7F;  
             color: white;
             border: none;
-            border-radius: 30px;
+            border-radius: 4px;  
             font-size: 1.1em;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -108,7 +109,7 @@
         <h1>Makeup Style Recommender</h1>
         <form id="makeupForm" action="/predict" method="post" enctype="multipart/form-data">
             <div class="upload-section">
-                <div class="upload-circle" onclick="document.getElementById('file-input').click()">
+                <div class="upload-area" onclick="document.getElementById('file-input').click()">
                     <div class="upload-text" id="upload-text">
                         Upload an image <span>⇩</span>
                     </div>
@@ -123,7 +124,6 @@
                     <option value="eyeshadow">Eyeshadow</option>
                     <option value="lipstick">Lipstick</option>
                     <option value="blush">Blush</option>
-            
                 </select>
                 
                 <select name="choice2" required>
@@ -131,7 +131,6 @@
                     <option value="eyeshadow">Eyeshadow</option>
                     <option value="lipstick">Lipstick</option>
                     <option value="blush">Blush</option>
-            
                 </select>
 
                 <button type="submit" class="submit-btn">Get Recommendations</button>
@@ -153,22 +152,6 @@
                 }
                 reader.readAsDataURL(file);
             }
-        });
-
-        document.getElementById('makeupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            
-            fetch('/predict', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (response.redirected) {
-                    window.location.href = response.url;
-                }
-            })
-            .catch(error => console.error('Error:', error));
         });
     </script>
 </body>
