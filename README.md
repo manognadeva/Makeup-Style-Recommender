@@ -79,14 +79,12 @@ The model is built using EfficientNetB0 with transfer learning:
 
 ## Future Enhancements
 
-While the current implementation effectively demonstrates the core functionality, potential enhancements could include:
-- Implementation of more sophisticated pre-trained models for improved accuracy
-Integration of additional features like facial feature detection
-Expansion of the recommendation system to include more product categories
-Enhanced user interaction features and personalization options
-The system successfully combines machine learning capabilities with a user-friendly interface to provide practical makeup recommendations based on individual characteristics.
-
-
+- Expand makeup styles by incorporating additional product categories, such as concealer and bronzer recommendations.
+- Introduce enhanced user features, including user profile creation for saving preferences and past recommendations.
+- Accuracy Enchancement:
+   - Fine-Tuning EfficientNetB0 to extract more relevant features and improve classification accuracy. Fine-tuning requires additional training epochs and more computational resources.
+   - Model Ensemble to combine predictions from multiple models such as EfficientNetB0 and ResNet50, to improve robustness and overall accuracy. Ensemble learning helps reduce bias and         variance, leading to better generalization on unseen data. Implementing ensemble learning significantly increases computational and storage requirements, which requires a little more      of time to execute.
+ 
 ## Result:
 
 ### The application provides:
