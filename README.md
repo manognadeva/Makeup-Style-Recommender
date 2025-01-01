@@ -71,6 +71,7 @@ The project utilizes the **FairFace Dataset** with a focus on Fitzpatrick skin t
 
 # Web Application
 Home Page: Upload an image and select makeup categories.
+
 Results Page: Displays the uploaded image, predicted skin tone, and personalized makeup recommendations.
 
 # Model Details
