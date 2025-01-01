@@ -82,7 +82,8 @@ The model is built using EfficientNetB0 with transfer learning:
 
 ## Epoch - Model Training
 
-<img width="1470" alt="Screenshot 2024-12-31 at 8 53 02 PM" src="https://github.com/user-attachments/assets/b389eea1-5a07-4a06-9f36-9cb156f2add0" />
+<img width="1093" alt="Screenshot 2025-01-01 at 4 53 51 PM" src="https://github.com/user-attachments/assets/876d5f34-4a7e-433e-b7e9-b4e4af16670f" />
+
 
 ## Future Enhancements
 
