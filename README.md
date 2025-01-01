@@ -19,7 +19,7 @@ This project is a machine learning-based web application that recommends makeup 
 
 - Flask-based web application with ngrok for public access
 - ResNet50V2 model architecture with transfer learning
-- Responsive UI design with modern CSS styling
+- Responsive UI design with modern HTML/CSS styling
 - Secure file handling and validation
 
 ## Dataset
