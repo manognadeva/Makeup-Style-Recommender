@@ -35,7 +35,8 @@ The project utilizes the **FairFace Dataset** with a focus on Fitzpatrick skin t
    ```
 2. Install the required Python packages:
    ```
-   pip install -r requirements.txt```
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 ### Model Training
